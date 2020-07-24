@@ -6,8 +6,9 @@
 package algoritmo_bp;
 
 /**
- *
- * @author alexa
+ * @author alexander obispo buendía
+ * @github: https://github.com/AlexanderHOB
+ 
  */
 public class CapaEntrenamiento {
     double[][] capa_z;

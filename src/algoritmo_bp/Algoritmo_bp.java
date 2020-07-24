@@ -5,13 +5,22 @@
  */
 package algoritmo_bp;
 
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
+
 /**
  *
  * @author alexander obispo buendía
  * @github: https://github.com/AlexanderHOB
  */
 public class Algoritmo_bp {
-
+    /*VARIABLES PARA UTILIZAR GRAFICOS DE FUNCIONES*/
+    XYSeries oSeries = new XYSeries("Salchipapas");
+    XYSeriesCollection oDataSet = new XYSeriesCollection();
+    JFreeChart oChart; 
     /**
      * @param args the command line arguments
      */
@@ -62,6 +71,7 @@ public class Algoritmo_bp {
     // fin fordward pass
         System.out.print("COSTO");
         Arreglo.imprimir(Arreglo.media(FormulasML.MSEM( capas[red_neuronal.length-1].getCapaA(), Y)));
+        
        if(train){
            // backpropagation
            Delta [] deltas = new Delta[red_neuronal.length-1];

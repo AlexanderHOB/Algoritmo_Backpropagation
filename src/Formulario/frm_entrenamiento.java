@@ -17,6 +17,9 @@ import java.io.*;
 import java.util.ArrayList;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
+import org.jfree.chart.JFreeChart;
+import org.jfree.data.xy.XYSeries;
+import org.jfree.data.xy.XYSeriesCollection;
 
 /**
  *
@@ -26,7 +29,11 @@ public class frm_entrenamiento extends javax.swing.JFrame {
     JFileChooser seleccionado = new JFileChooser();
     File archivo;
     gestionA gestion = new gestionA();
-    
+    ///*VARIABLES PARA UTILIZAR GRAFICOS DE FUNCIONES*/
+    XYSeries oSeries = new XYSeries("Salchipapas");
+    XYSeriesCollection oDataSet = new XYSeriesCollection();
+    JFreeChart oChart; 
+    //
     imagenFondo fondo = new imagenFondo();
     public static int [] arquitectura;
     public static int [] ndatos;
