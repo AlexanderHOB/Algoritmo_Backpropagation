@@ -427,7 +427,7 @@ public class frm_entrenamiento extends javax.swing.JFrame {
         //generar los arreglos para entrenar
         for (int i=0; i<c.length;i++){
             String u = (String) c[i];
-            System.out.println(delimitador);
+            //System.out.println(delimitador);
             String [] d = u.split(delimitador);
             try{
                 double[] tmp = new double[d.length-s];
@@ -440,7 +440,7 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                 double a = Double.parseDouble(d[j]);
                 tmp[j] = a;
             }
-            System.out.println("* " + s);
+            //System.out.println("* " + s);
             for(int j=(d.length-s); j<d.length;j++){
                 try{
                     double a = Double.parseDouble(d[j]);
@@ -497,16 +497,16 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                     File rutaArchivo = seleccionado.getCurrentDirectory();
                     String ruta = rutaArchivo.getAbsolutePath();
                     txtCargar.setText(ruta);
-                    System.out.println(ruta);
+                    //System.out.println(ruta);
                     if(cbDelimitado.getSelectedItem()==","){
                         delimitador = ",";
                         if(contenido.size()==0){
-                            System.out.println(contenido.size());
-                            System.out.println(contenido);
+                            //System.out.println(contenido.size());
+                            //System.out.println(contenido);
                             JOptionPane.showMessageDialog(null, "Archivo no delimitado por comas","Archivo inválido", JOptionPane.WARNING_MESSAGE);
                         }else{
-                            System.out.println(contenido.size());
-                            System.out.println(contenido);
+                            //System.out.println(contenido.size());
+                            //System.out.println(contenido);
                             JOptionPane.showMessageDialog(null, "Archivo cargado exitosamente","Archivo válido", JOptionPane.INFORMATION_MESSAGE);
                     }
                     }else if(cbDelimitado.getSelectedItem()==";"){
@@ -515,8 +515,8 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                         if(contenido.size()==0){
                             JOptionPane.showMessageDialog(null, "Archivo no delimitado por punto y comas", "Archivo inválido", JOptionPane.WARNING_MESSAGE);
                         }else{
-                            System.out.println(contenido.size());
-                            System.out.println(contenido);
+                            //System.out.println(contenido.size());
+                            //System.out.println(contenido);
                             JOptionPane.showMessageDialog(null, "Archivo cargado exitosamente","Archivo válido", JOptionPane.INFORMATION_MESSAGE);
                         }
                     }else if(cbDelimitado.getSelectedItem()=="tab"){
@@ -526,8 +526,8 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                             if(contenido.size()==0){
                                 JOptionPane.showMessageDialog(null, "Archivo no delimitado por tabulaciones", "Archivo inválido", JOptionPane.WARNING_MESSAGE);
                             }else{
-                                System.out.println(contenido.size());
-                                System.out.println(contenido);
+                                //System.out.println(contenido.size());
+                                //System.out.println(contenido);
                                 JOptionPane.showMessageDialog(null, "Archivo cargado exitosamente","Archivo válido", JOptionPane.INFORMATION_MESSAGE);
                             }
                         }else if(cbDelimitado.getSelectedItem()=="espacio"){
@@ -537,8 +537,8 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                             if(contenido.size()==0){
                                 JOptionPane.showMessageDialog(null, "Archivo no delimitado por espacios", "Archivo inválido", JOptionPane.WARNING_MESSAGE);
                             }else{
-                                System.out.println(contenido.size());
-                                System.out.println(contenido);
+                                //System.out.println(contenido.size());
+                                //System.out.println(contenido);
                                 JOptionPane.showMessageDialog(null, "Archivo cargado exitosamente","Archivo válido", JOptionPane.INFORMATION_MESSAGE);
                             }
                         }
@@ -598,10 +598,10 @@ public class frm_entrenamiento extends javax.swing.JFrame {
                 arquitectura[i]=a;
             }
         }
-        System.out.println(arquitectura.length);
-        for(int j=0;j<arquitectura.length;j++){
+        //System.out.println(arquitectura.length);
+        /*for(int j=0;j<arquitectura.length;j++){
             System.out.println(arquitectura[j]);
-        }
+        }*/
     }//GEN-LAST:event_btnEstablecerActionPerformed
 
     private void btnEstablecerMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnEstablecerMouseClicked
@@ -667,8 +667,8 @@ public class frm_entrenamiento extends javax.swing.JFrame {
         // arquitectura
         
         // X
-        System.out.println("****");
-        System.out.println(ndatos);
+        //System.out.println("****");
+        //System.out.println(ndatos);
         // Y
         
     }
