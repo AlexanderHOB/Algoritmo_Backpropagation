@@ -25,6 +25,7 @@ public class frm_prueba extends javax.swing.JFrame {
     public String test = "";
     CapaNeuronal[] red_neuronal;
     double[][] Y;
+    int e;
     /**
      * Creates new form frm_prueba
      */
@@ -40,6 +41,9 @@ public class frm_prueba extends javax.swing.JFrame {
     }
     public void setY(double[][] Y){
         this.Y = Y;
+    }
+    public void setE(int e){
+        this.e = e;
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -139,15 +143,25 @@ public class frm_prueba extends javax.swing.JFrame {
 
     private void btnProbarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProbarActionPerformed
         test = txtDatos.getText();
-        String []arrayT = test.split(" ");
-        double[][] t = new double[1][arrayT.length];
-        for(int i = 0; i<arrayT.length;i++){
-            t[0][i] = Double.parseDouble(arrayT[i]);
+        String[] arrayT = test.split(" ");
+        if(arrayT.length>e){
+            JOptionPane.showMessageDialog(null, "Los datos ingresados sobrepasan la cantidad de neuronas de entrada","Error de datos", JOptionPane.ERROR_MESSAGE);
+            txtDatos.setText("");
+        }else if(arrayT.length<e){
+            JOptionPane.showMessageDialog(null, "Los datos ingresados son menores a la cantidad de neuronas de entrada","Error de datos", JOptionPane.ERROR_MESSAGE);
+            txtDatos.setText("");
+        }else{
+            //String []arrayT = test.split(" ");
+            double[][] t = new double[1][arrayT.length];
+            for(int i = 0; i<arrayT.length;i++){
+                t[0][i] = Double.parseDouble(arrayT[i]);
+            }
+            double[][]r = entrenamiento(red_neuronal,t,Y,(float) 0.5,false,null,0);
+
+            String rpt = Arreglo.imprimirGUI(r);
+            JOptionPane.showMessageDialog(null, "La salida de la neurona es: "+ rpt,"Resultados", JOptionPane.DEFAULT_OPTION);
+            txtDatos.setText("");
         }
-        double[][]r = entrenamiento(red_neuronal,t,Y,(float) 0.5,false);
-        
-        String rpt = Arreglo.imprimirGUI(r);
-        JOptionPane.showMessageDialog(null, "La salida de la neurona "+""+" es: "+ rpt,"Resultados", JOptionPane.DEFAULT_OPTION);
     }//GEN-LAST:event_btnProbarActionPerformed
 
     private void txtDatosKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDatosKeyTyped

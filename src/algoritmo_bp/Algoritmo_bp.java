@@ -17,10 +17,7 @@ import org.jfree.data.xy.XYSeriesCollection;
  * @github: https://github.com/AlexanderHOB
  */
 public class Algoritmo_bp {
-    /*VARIABLES PARA UTILIZAR GRAFICOS DE FUNCIONES*/
-    XYSeries oSeries = new XYSeries("Salchipapas");
-    XYSeriesCollection oDataSet = new XYSeriesCollection();
-    JFreeChart oChart; 
+    
     /**
      * @param args the command line arguments
      */
@@ -34,11 +31,11 @@ public class Algoritmo_bp {
             {0, 0, 0 ,0 ,0, 1, 0},{0, 0, 0, 0, 0, 0 ,1}};
         // Entrenar red
        for(int i= 0; i < 2500; i++){
-           double[][]pY = entrenamiento(red_neuronal,X,Y, (float) 1.5,true);
+           double[][]pY = entrenamiento(red_neuronal,X,Y, (float) 1.5,true,null,0);
        }
        
        
-        double[][]r = entrenamiento(red_neuronal,t,Y, (float) 1.5,false);
+        double[][]r = entrenamiento(red_neuronal,t,Y, (float) 1.5,false,null,0);
         
         Arreglo.imprimir(r);
     }
@@ -53,8 +50,9 @@ public class Algoritmo_bp {
         }
         return nn;
     }
+    
     //funcion de entrenamiento
-    public static double[][] entrenamiento(CapaNeuronal[] red_neuronal,double[][] X, double[][] Y,float lr,boolean train){
+    public static double[][] entrenamiento(CapaNeuronal[] red_neuronal,double[][] X, double[][] Y,float lr,boolean train,XYSeries oSeries,int x){
     // Capa de entrada
     CapaEntrenamiento[] capas = new CapaEntrenamiento[red_neuronal.length];
     capas[0] = new CapaEntrenamiento();
@@ -71,7 +69,13 @@ public class Algoritmo_bp {
     // fin fordward pass
         System.out.print("COSTO");
         Arreglo.imprimir(Arreglo.media(FormulasML.MSEM( capas[red_neuronal.length-1].getCapaA(), Y)));
-        
+        //DIBUJAR GRÁFICO
+        if (oSeries != null){
+            oSeries.add(x,Arreglo.media(FormulasML.MSEM( capas[red_neuronal.length-1].getCapaA(), Y))[0][0]);
+            
+        }
+
+        //fin de dibujo de gráfico
        if(train){
            // backpropagation
            Delta [] deltas = new Delta[red_neuronal.length-1];
