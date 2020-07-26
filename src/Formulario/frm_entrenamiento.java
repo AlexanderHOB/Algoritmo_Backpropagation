@@ -480,7 +480,7 @@ public class frm_entrenamiento extends javax.swing.JFrame {
         JFrame Ventana = new JFrame("GRÁFICA DE COSTOS MSE");
         Ventana.getContentPane().add(Panel);
         Ventana.pack();
-        Ventana.setSize(800,500);
+        Ventana.setSize(700,400);
         Ventana.setVisible(true);
             Ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE  );
         //FIN DE GRAFICADOR
