@@ -1,4 +1,7 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 8d66fce... Cambios en impresiones de consola
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -481,7 +484,11 @@ public class frm_entrenamiento extends javax.swing.JFrame {
         JFrame Ventana = new JFrame("GRÁFICA DE COSTOS MSE");
         Ventana.getContentPane().add(Panel);
         Ventana.pack();
+<<<<<<< HEAD
         Ventana.setSize(700,400);
+=======
+        Ventana.setSize(800,500);
+>>>>>>> parent of 8d66fce... Cambios en impresiones de consola
         Ventana.setVisible(true);
             Ventana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE  );
         //FIN DE GRAFICADOR
@@ -710,6 +717,7 @@ public class frm_entrenamiento extends javax.swing.JFrame {
     }
 
 }
+<<<<<<< HEAD
 =======
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -1423,3 +1431,5 @@ public class frm_entrenamiento extends javax.swing.JFrame {
 
 }
 >>>>>>> 8d66fce42453e93a0af26baefd88460fdc42fdd0
+=======
+>>>>>>> parent of 8d66fce... Cambios en impresiones de consola
