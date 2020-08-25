@@ -10,7 +10,7 @@ public class gestionA {
     public gestionA(){
         
     }
-    public ArrayList<Integer> AbrirTextoEspacio(File archivo){
+    /*public ArrayList<Integer> AbrirTextoEspacio(File archivo){
         Scanner contenido = null;
         try{
         contenido = new Scanner(archivo);
@@ -47,7 +47,7 @@ public class gestionA {
             return null;
         }
         
-    }
+    }*/
     public ArrayList<String> AbrirTexto(File archivo){
         Scanner contenido = null;
         try{
@@ -68,7 +68,7 @@ public class gestionA {
         
     }
    
-    public ArrayList<Integer> AbrirTextoPunto(File archivo){
+    /*public ArrayList<Integer> AbrirTextoPunto(File archivo){
         Scanner contenido = null;
         try{
         contenido = new Scanner(archivo);
@@ -86,6 +86,6 @@ public class gestionA {
             return null;
         }
         
-    }
+    }*/
     
 }

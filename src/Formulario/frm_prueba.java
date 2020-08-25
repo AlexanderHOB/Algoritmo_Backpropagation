@@ -92,6 +92,11 @@ public class frm_prueba extends javax.swing.JFrame {
         );
 
         txtDatos.setFont(new java.awt.Font("Open Sans", 1, 12)); // NOI18N
+        txtDatos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtDatosActionPerformed(evt);
+            }
+        });
         txtDatos.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 txtDatosKeyTyped(evt);
@@ -173,6 +178,10 @@ public class frm_prueba extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Solo ingrese números","Datos incorrectos", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_txtDatosKeyTyped
+
+    private void txtDatosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtDatosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtDatosActionPerformed
 
     /**
      * @param args the command line arguments

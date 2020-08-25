@@ -3,11 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/alexa/OneDrive/Documents/NetBeansProjects/Entrenamiento_N/src/algoritmo_bp/Algoritmo_bp.java</file>
-            <file>file:/C:/Users/alexa/OneDrive/Documents/NetBeansProjects/Entrenamiento_N/src/Formulario/frm_entrenamiento.java</file>
-            <file>file:/C:/Users/alexa/OneDrive/Documents/NetBeansProjects/Entrenamiento_N/src/algoritmo_bp/Arreglo.java</file>
-            <file>file:/C:/Users/alexa/OneDrive/Documents/NetBeansProjects/Entrenamiento_N/src/Formulario/gestionA.java</file>
-            <file>file:/C:/Users/alexa/OneDrive/Documents/NetBeansProjects/Entrenamiento_N/src/Formulario/frm_prueba.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/CapaEntrenamiento.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/Arreglo.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/Formulario/frm_entrenamiento.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/Formulario/frm_prueba.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/Delta.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/CapaNeuronal.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/Algoritmo_bp.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/Formulario/gestionA.java</file>
+            <file>file:/D:/Algoritmo_Backpropagation/src/algoritmo_bp/FormulasML.java</file>
         </group>
     </open-files>
 </project-private>
